@@ -127,10 +127,8 @@ async function fetchSSE(url, options) {
 }
 
 // src/utils.ts
-var import_remark = require("remark");
-var import_strip_markdown = __toESM(require("strip-markdown"), 1);
 function markdownToText(markdown) {
-  return (0, import_remark.remark)().use(import_strip_markdown.default).processSync(markdown ?? "").toString();
+  return markdown;
 }
 
 // src/chatgpt-api.ts
