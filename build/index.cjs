@@ -238,10 +238,7 @@ var ChatGPTAPI = class {
           abortController.abort();
         };
       }
-      return (0, import_p_timeout.default)(responseP, {
-        milliseconds: timeoutMs,
-        message: "ChatGPT timed out waiting for response"
-      });
+      return (0, import_p_timeout.default)(responseP, timeoutMs);
     } else {
       return responseP;
     }
